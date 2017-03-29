@@ -1,0 +1,45 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+<% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+<% end %>
+
+<%= form_tag({}, {class: 'form-signin'})do%>
+  <h2 class="form-signin-heading">Please Log In</h2>
+  <%= label_tag :name, 'Name', :class => 'sr-only'%>
+  <%= text_field_tag :name, params[:name], :class => 'form-control', :placeholder => 'Name' %>
+  <%= label_tag :surname, 'Surname', :class => 'sr-only'%>
+  <%= text_field_tag :surname, params[:surname], :class => 'form-control', :placeholder => 'Surname' %>
+  <%= label_tag :password, 'Password', :class => 'sr-only'%>
+  <%= password_field_tag :password, params[:password], :class => 'form-control', :placeholder => 'Password' %>
+
+  <%= button_tag "Login", :class => 'btn btn-lg btn-primary btn-block' %>
+    <%= link_to "(forgot password)", new_password_reset_path %>
+    <br>
+    <%= link_to 'New User', new_user_path %>
+
+<% end %>
+
+<% if false %>
+<%= form_tag do%>
+    <fieldset>
+      <legend>Please Log In</legend>
+      <div>
+       <%= label_tag :name, 'Name', :class => 'sr-only'%>
+       <%= text_field_tag :name, params[:name], :class => 'form-control', :placeholder => 'Name' %>
+      </div>
+      <div>
+        <%= label_tag :surname, 'Surname:' %>
+        <%= text_field_tag :surname, params[:surname] %>
+      </div>
+      <div>
+        <%= label_tag :password, 'Password:' %>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+      <div>
+        <%= submit_tag "Login" %>
+
+      </div>
+    </fieldset>
+<% end %>
+<% end %>

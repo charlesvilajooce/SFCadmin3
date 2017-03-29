@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level: 1
+  surname: MyString
+  name: MyString
+  email: MyString
+  password_digest: <%= BCrypt::Password.create('secret') %>
+  birthday: 2017-03-04
+  parents: MyText
+  photo_url: MyString
+  injured: false
+  injury_archive: MyText
+  suspended: false
+  cards_archive: MyText
+  role: 1
+  school: MyString
+  school_archive: MyText
+  physic_char: MyText
+  playtime: 1
+  arriving_date: 2017-03-04
+  endcontrat_date: 2017-03-04
+  sportactivity_archive: MyText
+
+two:
+  level: 1
+  surname: MyString
+  name: MyString
+  email: MyString
+  password_digest: <%= BCrypt::Password.create('secret') %>
+  birthday: 2017-03-04
+  parents: MyText
+  photo_url: MyString
+  injured: false
+  injury_archive: MyText
+  suspended: false
+  cards_archive: MyText
+  role: 1
+  school: MyString
+  school_archive: MyText
+  physic_char: MyText
+  playtime: 1
+  arriving_date: 2017-03-04
+  endcontrat_date: 2017-03-04
+  sportactivity_archive: MyText
